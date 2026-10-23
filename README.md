@@ -14,7 +14,7 @@
 
 #### Project Video Walkthrough
 
-* **Video URL:** 
+* **Video URL:** https://www.youtube.com/watch?v=GuPVK96SGq4
 
 #### Detailed Project Overview
 
