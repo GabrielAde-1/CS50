@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="tracker-card">
+        <h2>Log a New Gift Idea</h2>
+        <form action="/" method="post">
+            <input autocomplete="off" name="name" placeholder="Recipient Name" type="text" required>
+            <input autocomplete="off" name="item" placeholder="Gift/Item Idea" type="text" required>
+            <input autocomplete="off" name="event" placeholder="Occasion (e.g., Birthday, Graduation)" type="text" required>
+            <button type="submit">Add Wish</button>
+        </form>
+    </div>
+
+    <div class="tracker-card">
+        <h2>Saved Registry Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>For Whom</th>
+                    <th>Item Description</th>
+                    <th>Celebration Event</th>
+                    <th>Management</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for wish in wishes %}
+                    <tr>
+                        <td>{{ wish.name }}</td>
+                        <td>{{ wish.item }}</td>
+                        <td>{{ wish.event }}</td>
+                        <td>
+                            <form action="/delete" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="{{ wish.id }}">
+                                <button type="submit" class="delete-btn">❌ Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
