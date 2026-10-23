@@ -3,9 +3,13 @@
 #### A Web-based Gift Registry Management Solution
 
 **Author:** Gabriel Adejugbe
+
 **GitHub Username:** GabrielAde-1
+
 **edX Username:** adejugbegabriel
+
 **Location:** Walsall, UK
+
 **Date:** 23/10/26 
 
 #### Project Video Walkthrough
